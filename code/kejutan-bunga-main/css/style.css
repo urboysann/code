@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('https://i.pinimg.com/564x/72/72/89/72728945b1f60ffc3332138673e59812.jpg'); /* Path ke gambar latar belakang */
+    background-size: cover; /* Mengubah ukuran gambar agar sesuai dengan layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center center; /* Menyelaraskan gambar di tengah */
+    margin: 0; /* Menghilangkan margin default */
+}
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #d6b939, 0 0 50px #d6b939, 0 0 100px #d6b939;
+    }
+    10%, 90%{
+        color: white;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
+
+/* Aturan umum untuk tombol */
+.button button {
+    background-color: whitesmoke; /* Hijau */
+    border: none;
+    color: black; /* Warna teks putih */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Sudut membulat */
+    transition-duration: 0.4s; /* Transisi lembut */
+}
+
+/* Mengubah gaya tombol saat hover */
+.button button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid blues;
+}
+
+/* Aturan khusus untuk tautan di dalam tombol */
+.button button a {
+    color: black;
+    text-decoration: none;
+}
+
+.button button:hover a {
+    color: black;
+}
